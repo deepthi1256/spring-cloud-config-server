@@ -33,10 +33,6 @@ spring:
       threadPrefix: AppConsumer
       ttlSeconds: 60
 
-log:
-  path: 'C:\\logs\\'
-
-
 #management:
 #  endpoint:
 #    beans:
