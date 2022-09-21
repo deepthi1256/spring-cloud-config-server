@@ -6,11 +6,6 @@ spring:
   #    allow-circular-references: true
   application:
     name: dual-sync
-  profiles:
-    active: uat
-
----
-#'dev' profile only
 
 
   datasource:
