@@ -33,12 +33,6 @@ spring:
       threadPrefix: AppConsumer
       ttlSeconds: 60
 
-
-
-server:
-  port: 8080
-
-
 log:
   path: 'C:\\logs\\'
 
