@@ -12,11 +12,6 @@ spring:
 ---
 #'dev' profile only
 
-spring:
-  config:
-    activate:
-      on-profile: dev
-    logsPath: C:\\logs\\
 
   datasource:
     url: jdbc:oracle:thin:@//localhost:1521/xepdb1
