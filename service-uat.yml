@@ -7,7 +7,7 @@ spring:
   application:
     name: dual-sync
   profiles:
-    active: dev
+    active: uat
 
 ---
 #'dev' profile only
