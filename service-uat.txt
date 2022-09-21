@@ -1,0 +1,58 @@
+---
+#common properties for all config and will be replaced by active profile.
+
+spring:
+  #  main:
+  #    allow-circular-references: true
+  application:
+    name: dual-sync
+  profiles:
+    active: dev
+
+---
+#'dev' profile only
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+    logsPath: C:\\logs\\
+
+  datasource:
+    url: jdbc:oracle:thin:@//localhost:1521/xepdb1
+    username: deepthi
+    password: deepthi
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    show-sql: false
+    database-platform: org.hibernate.dialect.Oracle12cDialect
+    hibernate:
+      ddl-auto: update
+
+  kafka:
+    max.retries: 3
+    max.retry.delay: 200
+    consumer-thread-pool-config:
+      threadCap: 5
+      queuedTaskCap: 20
+      threadPrefix: AppConsumer
+      ttlSeconds: 60
+
+
+
+server:
+  port: 8080
+
+
+log:
+  path: 'C:\\logs\\'
+
+
+#management:
+#  endpoint:
+#    beans:
+#      enabled: true
+#  endpoints:
+#    web:
+#      exposure:
+#        include: beans
